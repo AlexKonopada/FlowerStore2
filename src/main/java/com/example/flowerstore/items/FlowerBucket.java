@@ -8,7 +8,7 @@ import java.util.List;
 
 @Getter
 @Setter
-public class FlowerBucket implements Item{
+public class FlowerBucket extends Item{
     private List<Flower> bucket;
     private String description;
 
@@ -30,7 +30,7 @@ public class FlowerBucket implements Item{
 
     public boolean searchFlower(Flower flower) {
         for (Flower flower1: bucket) {
-            if (flower1 == flower) {
+            if (flower1.getDescription() == flower.getDescription()) {
                 return true;
             }
         }

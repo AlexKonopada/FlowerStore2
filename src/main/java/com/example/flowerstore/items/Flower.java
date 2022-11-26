@@ -16,7 +16,7 @@ import javax.persistence.Table;
 @Entity
 @Table
 
-public class Flower implements Item{
+public class Flower extends Item{
     @Id
     @GeneratedValue
     private int id;
@@ -27,7 +27,4 @@ public class Flower implements Item{
     public double price(){
         return price;
     }
-
-
-
 }
